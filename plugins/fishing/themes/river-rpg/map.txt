@@ -1,0 +1,18 @@
+# One character a 4x4-pixel tile; theme.json "tiles" says what each is.
+#   T forest  G grass  # cliff  | waterfall  * white water  = pool
+#   ~ river   , bank   : path
+TTTTTTTTT##TTTTTTTTT
+TTTTTTTT#||#TTTTTTTT
+TTTTTTT##||##TTTTTTT
+TTTTTGG##||##GGTTTTT
+TTTTG,,=****,GGGGGTT
+TTTG,=======,GGGGGGT
+TTGG,=======,GG:GGGT
+TTG,~~=====~,GG:GGGT
+TTG,~~~~~~~,GGG:GGGT
+TG,~~~*~~~,GGGG:GGGT
+TG,~~~~~~,GGGGG:GGGT
+G,~~~~~~,GGGGGG:GGTT
+,~~~*~~,GGGGGGG:GGTT
+~~~~~~,GGGGGGGG:GTTT
+~~~~~,GGGGGGGGG:GTTT

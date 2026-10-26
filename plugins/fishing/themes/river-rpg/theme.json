@@ -1,0 +1,775 @@
+{
+  "schema": 1,
+  "palette": {
+    "k": {
+      "hex": "#1a1c2c",
+      "c256": 234,
+      "ascii": "#"
+    },
+    "D": {
+      "hex": "#183f2a",
+      "c256": 22,
+      "ascii": "T"
+    },
+    "f": {
+      "hex": "#2b6b39",
+      "c256": 29,
+      "ascii": "t"
+    },
+    "g": {
+      "hex": "#4c9a3c",
+      "c256": 71,
+      "ascii": "\""
+    },
+    "G": {
+      "hex": "#8cd05a",
+      "c256": 113,
+      "ascii": "'"
+    },
+    "w": {
+      "hex": "#24569c",
+      "c256": 25,
+      "ascii": "~"
+    },
+    "W": {
+      "hex": "#3f8ad6",
+      "c256": 68,
+      "ascii": "~"
+    },
+    "c": {
+      "hex": "#a6dcf2",
+      "c256": 153,
+      "ascii": "-"
+    },
+    "o": {
+      "hex": "#f4fbff",
+      "c256": 231,
+      "ascii": "*"
+    },
+    "r": {
+      "hex": "#5c5d72",
+      "c256": 60,
+      "ascii": "@"
+    },
+    "R": {
+      "hex": "#a4a6b8",
+      "c256": 146,
+      "ascii": "O"
+    },
+    "b": {
+      "hex": "#6b3f23",
+      "c256": 94,
+      "ascii": "|"
+    },
+    "B": {
+      "hex": "#c1914c",
+      "c256": 173,
+      "ascii": "^"
+    },
+    "s": {
+      "hex": "#ead1a0",
+      "c256": 223,
+      "ascii": "."
+    },
+    "x": {
+      "hex": "#d83c3c",
+      "c256": 167,
+      "ascii": "x"
+    },
+    "u": {
+      "hex": "#f2d84a",
+      "c256": 221,
+      "ascii": "u"
+    },
+    "n": {
+      "hex": "#2f428c",
+      "c256": 61,
+      "ascii": "n"
+    },
+    "L": {
+      "hex": "#ffe28a",
+      "c256": 222,
+      "ascii": "L"
+    }
+  },
+  "glow": "L",
+  "tileSize": 4,
+  "map": "map.txt",
+  "outside": "T",
+  "sprites": [
+    "sprites/tiles.txt",
+    "sprites/scenery.txt",
+    "sprites/actors.txt"
+  ],
+  "speeds": {
+    "river": 2,
+    "pool": 6,
+    "falls": 1,
+    "foam": 2,
+    "grass": 5,
+    "reeds": 7,
+    "walk": 4,
+    "idle": 9
+  },
+  "tiles": {
+    "T": {
+      "sprite": "forest"
+    },
+    "G": {
+      "sprite": "grass"
+    },
+    "#": {
+      "sprite": "cliff"
+    },
+    "|": {
+      "sprite": "falls",
+      "anim": "flow",
+      "dir": [
+        0,
+        1
+      ],
+      "speed": "falls"
+    },
+    "*": {
+      "sprite": "foam",
+      "anim": "sparkle",
+      "speed": "foam"
+    },
+    "=": {
+      "sprite": "pool",
+      "anim": "flow",
+      "dir": [
+        1,
+        0
+      ],
+      "speed": "pool",
+      "edge": {
+        "color": "c",
+        "group": "=~*|"
+      }
+    },
+    "~": {
+      "sprite": "river",
+      "anim": "flow",
+      "dir": [
+        -1,
+        1
+      ],
+      "speed": "river",
+      "edge": {
+        "color": "c",
+        "group": "=~*|"
+      }
+    },
+    ",": {
+      "sprite": "bank"
+    },
+    ":": {
+      "sprite": "path"
+    }
+  },
+  "layers": [
+    "ground",
+    "objects",
+    "people",
+    "fx"
+  ],
+  "objects": [
+    {
+      "sprite": "boulder",
+      "x": 44,
+      "y": 21,
+      "layer": "ground"
+    },
+    {
+      "sprite": "boulder",
+      "x": 23,
+      "y": 40,
+      "layer": "ground"
+    },
+    {
+      "sprite": "pebbles",
+      "x": 33,
+      "y": 46,
+      "layer": "ground"
+    },
+    {
+      "sprite": "pebbles",
+      "x": 16,
+      "y": 34,
+      "layer": "ground"
+    },
+    {
+      "sprite": "boulder_big",
+      "x": 20,
+      "y": 26,
+      "layer": "ground"
+    },
+    {
+      "sprite": "reeds",
+      "x": 17,
+      "y": 22,
+      "layer": "objects",
+      "anim": {
+        "kind": "loop",
+        "speed": "reeds"
+      }
+    },
+    {
+      "sprite": "reeds",
+      "x": 47,
+      "y": 29,
+      "layer": "objects",
+      "anim": {
+        "kind": "loop",
+        "speed": "reeds"
+      },
+      "offset": 3
+    },
+    {
+      "sprite": "tuft",
+      "x": 52,
+      "y": 43,
+      "layer": "objects",
+      "anim": {
+        "kind": "loop",
+        "speed": "grass"
+      }
+    },
+    {
+      "sprite": "tuft",
+      "x": 40,
+      "y": 47,
+      "layer": "objects",
+      "anim": {
+        "kind": "loop",
+        "speed": "grass"
+      },
+      "offset": 2
+    },
+    {
+      "sprite": "tuft",
+      "x": 67,
+      "y": 34,
+      "layer": "objects",
+      "anim": {
+        "kind": "loop",
+        "speed": "grass"
+      },
+      "offset": 4
+    },
+    {
+      "sprite": "flowers",
+      "x": 56,
+      "y": 30,
+      "layer": "objects"
+    },
+    {
+      "sprite": "flowers",
+      "x": 63,
+      "y": 47,
+      "layer": "objects"
+    },
+    {
+      "sprite": "bush",
+      "x": 49,
+      "y": 23,
+      "layer": "objects"
+    },
+    {
+      "sprite": "tree",
+      "x": 66,
+      "y": 14,
+      "layer": "objects"
+    },
+    {
+      "sprite": "tree_small",
+      "x": 66,
+      "y": 40,
+      "layer": "objects"
+    },
+    {
+      "sprite": "hut",
+      "x": 52,
+      "y": 13,
+      "layer": "objects",
+      "night": "hut_lit"
+    },
+    {
+      "sprite": "lantern",
+      "x": 49,
+      "y": 20,
+      "layer": "objects"
+    },
+    {
+      "sprite": "stall",
+      "x": 45,
+      "y": 32,
+      "layer": "objects"
+    },
+    {
+      "sprite": "sign",
+      "x": 39,
+      "y": 36,
+      "layer": "objects"
+    },
+    {
+      "sprite": "barrel",
+      "x": 59,
+      "y": 37,
+      "layer": "objects"
+    },
+    {
+      "sprite": "log",
+      "x": 53,
+      "y": 46,
+      "layer": "objects"
+    },
+    {
+      "sprite": "villager",
+      "x": 61,
+      "y": 26,
+      "layer": "people",
+      "anim": {
+        "kind": "patrol",
+        "dy": 14,
+        "speed": "walk"
+      }
+    },
+    {
+      "sprite": "villager_b",
+      "x": 50,
+      "y": 41,
+      "layer": "people",
+      "anim": {
+        "kind": "loop",
+        "speed": "idle"
+      }
+    },
+    {
+      "sprite": "child",
+      "x": 44,
+      "y": 44,
+      "layer": "people",
+      "anim": {
+        "kind": "patrol",
+        "dx": -6,
+        "speed": "walk"
+      },
+      "when": [
+        "morning",
+        "day",
+        "evening"
+      ]
+    }
+  ],
+  "angler": {
+    "sprite": "angler",
+    "x": 20,
+    "y": 16,
+    "layer": "people",
+    "rodTip": [
+      31,
+      17
+    ],
+    "bobber": [
+      37,
+      27
+    ],
+    "line": "o",
+    "bobberSprite": "bobber",
+    "rippleSprite": "ripple",
+    "splashSprite": "splash",
+    "poses": {
+      "wait": 0,
+      "pull": 1,
+      "show": 2,
+      "sit": 3
+    }
+  },
+  "fish": [
+    {
+      "id": "ayu",
+      "sprite": "fish_ayu",
+      "value": 40,
+      "weight": 40,
+      "size": [
+        12,
+        22
+      ]
+    },
+    {
+      "id": "yamame",
+      "sprite": "fish_yamame",
+      "value": 70,
+      "weight": 25,
+      "size": [
+        15,
+        28
+      ]
+    },
+    {
+      "id": "iwana",
+      "sprite": "fish_iwana",
+      "value": 90,
+      "weight": 18,
+      "size": [
+        18,
+        35
+      ]
+    },
+    {
+      "id": "koi",
+      "sprite": "fish_koi",
+      "value": 120,
+      "weight": 10,
+      "size": [
+        30,
+        60
+      ]
+    },
+    {
+      "id": "big",
+      "sprite": "fish_big",
+      "value": 500,
+      "weight": 2,
+      "size": [
+        60,
+        95
+      ]
+    }
+  ],
+  "focus": [
+    44,
+    26
+  ],
+  "biteEverySeconds": [
+    20,
+    75
+  ],
+  "phases": {
+    "morning": {
+      "tint": "#ffb36b",
+      "amount": 0.12
+    },
+    "day": {
+      "amount": 0
+    },
+    "evening": {
+      "tint": "#ff6a3d",
+      "amount": 0.24
+    },
+    "night": {
+      "tint": "#0b1640",
+      "amount": 0.55
+    }
+  },
+  "window": {
+    "bg": "#2b1d14",
+    "border": "#f2c66d",
+    "text": "#fff4dc",
+    "accent": "#7fe0ff",
+    "dim": "#c9a978",
+    "opacity": 0.74,
+    "tab": "#f2c66d",
+    "tabText": "#2b1d14",
+    "corners": "round"
+  },
+  "labels": {
+    "zh-TW": {
+      "location": "清溪",
+      "phases": {
+        "morning": "晨",
+        "day": "午",
+        "evening": "暮",
+        "night": "夜"
+      },
+      "stats": {
+        "contextLeft": "專注",
+        "cost": "花費",
+        "turns": "回合",
+        "tools": "工具",
+        "weeklyLeft": "週額度",
+        "fiveHourLeft": "時額度",
+        "catches": "漁獲"
+      },
+      "menu": {
+        "cast": "拋竿",
+        "reel": "收竿",
+        "bait": "魚餌",
+        "bag": "背包",
+        "dex": "圖鑑",
+        "setup": "設定"
+      },
+      "controls": {
+        "reel": "收竿",
+        "decide": "確定"
+      },
+      "messages": {
+        "welcome": "來到{location}。Claude 工作時，釣竿也跟著動。",
+        "cast": "拋竿！",
+        "reel": "把線收回來了。",
+        "bite": "浮標沉了！按 r 收竿！",
+        "catch": "釣到{fish}！{size}cm",
+        "escape": "被牠溜了…",
+        "bait": "換上{bait}。",
+        "bag": "背包：{rod}、{bait}。",
+        "dex": "圖鑑：{list}（共{total}條）",
+        "dexEmpty": "圖鑑還是空的。",
+        "setup": "主題 {theme}，音效 {sound}。輸入 /fishing sound on 開啟。",
+        "doneCatch": "完成！釣到{fish}，{size}cm。"
+      },
+      "states": {
+        "idle": "靜候中",
+        "thinking": "Claude 思考中…",
+        "tool": "作業中：{tool}",
+        "waiting": "等你回覆！",
+        "done": "完成！",
+        "error": "線斷了…出了點錯",
+        "compacting": "整理記憶中…"
+      },
+      "tools": {
+        "read": "讀取",
+        "edit": "編輯",
+        "bash": "指令",
+        "web": "網路",
+        "agent": "分身",
+        "other": "工具"
+      },
+      "fish": {
+        "ayu": "香魚",
+        "yamame": "山女鱒",
+        "iwana": "岩魚",
+        "koi": "鯉魚",
+        "big": "大傢伙"
+      },
+      "baits": [
+        "蚯蚓",
+        "水生蟲",
+        "麵糰餌"
+      ],
+      "rods": [
+        "竹竿",
+        "長竿",
+        "溪流竿"
+      ]
+    },
+    "ja": {
+      "location": "清流",
+      "phases": {
+        "morning": "あさ",
+        "day": "ひる",
+        "evening": "ゆう",
+        "night": "よる"
+      },
+      "stats": {
+        "contextLeft": "集中",
+        "cost": "費用",
+        "turns": "ターン",
+        "tools": "ツール",
+        "weeklyLeft": "週枠",
+        "fiveHourLeft": "5h枠",
+        "catches": "釣果"
+      },
+      "menu": {
+        "cast": "なげる",
+        "reel": "まく",
+        "bait": "えさ",
+        "bag": "かばん",
+        "dex": "ずかん",
+        "setup": "せってい"
+      },
+      "controls": {
+        "reel": "まく",
+        "decide": "けってい"
+      },
+      "messages": {
+        "welcome": "{location}に来た。Claude が働くと、竿も動く。",
+        "cast": "えいっと投げた！",
+        "reel": "糸をたぐり寄せた。",
+        "bite": "浮きが沈んだ！ r でまけ！",
+        "catch": "{fish}がかかった！ {size}cm",
+        "escape": "するりと逃げられた…",
+        "bait": "えさは{bait}。",
+        "bag": "かばん：{rod}・{bait}。",
+        "dex": "ずかん：{list}（ぜんぶで{total}匹）",
+        "dexEmpty": "ずかんはまだ白紙だ。",
+        "setup": "テーマ {theme}、音 {sound}。/fishing sound on で音が鳴る。",
+        "doneCatch": "できた！ {fish}、{size}cm。"
+      },
+      "states": {
+        "idle": "ひとやすみ",
+        "thinking": "Claude 考え中…",
+        "tool": "作業中：{tool}",
+        "waiting": "あなたの番です！",
+        "done": "できた！",
+        "error": "糸が切れた…エラー",
+        "compacting": "記憶を整理中…"
+      },
+      "tools": {
+        "read": "読み込み",
+        "edit": "編集",
+        "bash": "コマンド",
+        "web": "ウェブ",
+        "agent": "分身",
+        "other": "ツール"
+      },
+      "fish": {
+        "ayu": "アユ",
+        "yamame": "ヤマメ",
+        "iwana": "イワナ",
+        "koi": "コイ",
+        "big": "大物"
+      },
+      "baits": [
+        "ミミズ",
+        "川虫",
+        "練りえさ"
+      ],
+      "rods": [
+        "竹竿",
+        "延べ竿",
+        "渓流竿"
+      ]
+    },
+    "en": {
+      "location": "Clearbrook",
+      "phases": {
+        "morning": "Dawn",
+        "day": "Noon",
+        "evening": "Dusk",
+        "night": "Night"
+      },
+      "stats": {
+        "contextLeft": "Focus",
+        "cost": "Cost",
+        "turns": "Turns",
+        "tools": "Tools",
+        "weeklyLeft": "Week",
+        "fiveHourLeft": "5h",
+        "catches": "Catch"
+      },
+      "menu": {
+        "cast": "Cast",
+        "reel": "Reel",
+        "bait": "Lure",
+        "bag": "Bag",
+        "dex": "Dex",
+        "setup": "Setup"
+      },
+      "controls": {
+        "reel": "Reel",
+        "decide": "OK"
+      },
+      "messages": {
+        "welcome": "Welcome to {location}. The rod moves while Claude works.",
+        "cast": "Cast!",
+        "reel": "You pull the line in.",
+        "bite": "The float dips! Press r!",
+        "catch": "A {fish}! {size}cm",
+        "escape": "It slipped away...",
+        "bait": "Lure: {bait}.",
+        "bag": "Bag: {rod}, {bait}.",
+        "dex": "Dex: {list} ({total} in all)",
+        "dexEmpty": "The dex is still blank.",
+        "setup": "Theme {theme}, sound {sound}. /fishing sound on to hear it.",
+        "doneCatch": "Done! A {fish}, {size}cm."
+      },
+      "states": {
+        "idle": "Taking it easy",
+        "thinking": "Claude is thinking...",
+        "tool": "Working: {tool}",
+        "waiting": "Your turn!",
+        "done": "Done!",
+        "error": "The line snapped... an error",
+        "compacting": "Tidying up memory..."
+      },
+      "tools": {
+        "read": "reading",
+        "edit": "editing",
+        "bash": "shell",
+        "web": "web",
+        "agent": "sub-agent",
+        "other": "tool"
+      },
+      "fish": {
+        "ayu": "sweetfish",
+        "yamame": "trout",
+        "iwana": "char",
+        "koi": "carp",
+        "big": "big one"
+      },
+      "baits": [
+        "worm",
+        "nymph",
+        "dough"
+      ],
+      "rods": [
+        "bamboo",
+        "long rod",
+        "stream rod"
+      ]
+    }
+  },
+  "states": {
+    "idle": {
+      "pose": "sit"
+    },
+    "thinking": {
+      "pose": "pull"
+    },
+    "tool": {
+      "pose": "pull",
+      "kinds": {
+        "read": {
+          "fish": "fish_ayu",
+          "effect": "ripple"
+        },
+        "edit": {
+          "fish": "fish_yamame",
+          "effect": "splash"
+        },
+        "bash": {
+          "fish": "fish_iwana",
+          "effect": "splash"
+        },
+        "web": {
+          "fish": "fish_koi",
+          "effect": "ripple"
+        },
+        "agent": {
+          "fish": "fish_big",
+          "effect": "splash"
+        },
+        "other": {
+          "fish": "fish_ayu",
+          "effect": "ripple"
+        }
+      }
+    },
+    "waiting": {
+      "pose": "wait",
+      "alert": "alert"
+    },
+    "done": {
+      "pose": "show"
+    },
+    "error": {
+      "pose": "wait",
+      "cloud": "cloud"
+    },
+    "compacting": {
+      "pose": "sit",
+      "phase": "night",
+      "rain": "c"
+    }
+  },
+  "sounds": {
+    "cast": "sounds/cast.wav",
+    "bite": "sounds/bite.wav",
+    "catch": "sounds/catch.wav",
+    "snap": "sounds/snap.wav",
+    "waiting": "sounds/waiting.wav",
+    "done": "sounds/done.wav"
+  }
+}
