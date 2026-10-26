@@ -1,0 +1,47 @@
+{
+  "theme": "river-rpg",
+  "locale": "zh-TW",
+  "stats": [
+    "contextLeft",
+    "cost",
+    "turns"
+  ],
+  "sound": {
+    "enabled": true,
+    "player": "auto",
+    "volume": 0.5,
+    "quietHours": "22:00-07:00",
+    "mute": [
+      "bite"
+    ],
+    "alertsOnly": false,
+    "minGapMs": 1500
+  },
+  "fps": 6,
+  "pixelMode": "half",
+  "colorMode": "auto",
+  "autoOpen": true,
+  "idleSlowMinutes": 5,
+  "idleFreezeMinutes": 15,
+  "utcOffset": "",
+  "overrides": {
+    "palette": {
+      "x": "#3c78d8"
+    },
+    "window": {
+      "bg": "#2a1238",
+      "opacity": 0.8
+    },
+    "labels": {
+      "zh-TW": {
+        "location": "後山溪"
+      },
+      "en": {
+        "location": "Willow Creek",
+        "stats": {
+          "cost": "Spent"
+        }
+      }
+    }
+  }
+}
