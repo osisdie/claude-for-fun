@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "description": "A fishing pane in classic 16-bit pixel-art RPG style: the scene, its HUD and sounds follow what Claude is doing.",
   "author": {
-    "name": "claude-for-fun contributors",
-    "url": "https://github.com/osisdie/claude-for-fun"
+    "name": "osisdie",
+    "url": "https://github.com/osisdie"
   },
   "license": "MIT",
   "keywords": [
