@@ -1,0 +1,15 @@
+# Written by the engine when it loads the mod (API types for the editor).
+**/.claude-plugin/types/
+# Local, never shared
+profile.local.json
+*.local.json
+.env
+.env.*
+# Tooling and OS
+node_modules/
+coverage/
+.DS_Store
+Thumbs.db
+*.log
+*~
+*.swp
